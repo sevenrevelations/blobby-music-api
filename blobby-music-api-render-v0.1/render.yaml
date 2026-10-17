@@ -3,6 +3,9 @@ services:
     name: blobby-music-api
     runtime: docker
     plan: free
+    rootDir: .
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     healthCheckPath: /health
     autoDeploy: true
     envVars:
