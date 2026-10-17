@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: blobby-music-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: https://sevenrevelations.github.io
